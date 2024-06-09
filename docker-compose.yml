@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  db-postgresauth:
+    image: postgres
+    ports:
+      - '5432:5432'
+    container_name: 'db-postgres'
+    restart: always
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+
+volumes:
+  database:

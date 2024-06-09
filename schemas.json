@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Example API",
+    "description": "Documentation for the Example API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/example": {
+      "get": {
+        "summary": "Get Example Information",
+        "description": "Returns information about the example resource",
+        "responses": {
+          "200": {
+            "description": "Successful request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "format": "int64",
+                      "description": "ID of the example"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "Name of the example"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "Description of the example"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
